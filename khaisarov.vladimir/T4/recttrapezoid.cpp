@@ -1,6 +1,10 @@
 #include "recttrapezoid.h"
 
-RectTrapezoid::RectTrapezoid(const Point& bl, double tlen, double blen, double h) : bLeft(bl), topLenght(tlen), bottomLenght(blen), height(h) {}
+RectTrapezoid::RectTrapezoid(const Point& bl, double tlen, double blen, double h) :
+	bLeft(bl),
+	topLenght(tlen),
+	bottomLenght(blen),
+	height(h) {}
 
 double RectTrapezoid::getArea() const
 {
