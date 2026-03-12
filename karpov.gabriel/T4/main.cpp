@@ -25,6 +25,12 @@ int main() {
         std::cout << "[" << s->getName() << ", (" << c.x << ", " << c.y << "), "
             << s->getArea() << "]" << std::endl;
     }
+    double factorInput;
+    std::cin >> factorInput;
+    if (std::cin.fail()) {
+        std::cerr << "ERROR. Wrong data format\n";
+        return 1;
+    }
     for (auto& s : shapes)
         s->scale(2);
     std::cout << "after:" << std::endl;
@@ -33,4 +39,5 @@ int main() {
         std::cout << "[" << s->getName() << ", (" << c.x << ", " << c.y << "), "
             << s->getArea() << "]" << std::endl;
     }
+    return 0;
 }
