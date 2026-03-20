@@ -3,11 +3,11 @@
 #include <cstdio>
 #include <stdexcept>
 
-void CompositeShape::addShape(Shape* shape) {
+void CompositeShape::addShape(std::unique_ptr<Shape> shape) {
     if (shape == nullptr) {
         throw std::invalid_argument("Cannot add nullptr shape");
     }
-    shapes_.push_back(std::unique_ptr<Shape>(shape));
+    shapes_.push_back(std::move(shape));
 }
 
 double CompositeShape::getArea() const {
