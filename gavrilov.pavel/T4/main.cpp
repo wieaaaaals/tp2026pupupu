@@ -37,18 +37,10 @@ int main(int argc, char* argv[]) {
         std::cout << "\n";
     }
 
-    double factor;
+    double factor = 2.0;
 
     if (argc > 1) {
         factor = std::stod(argv[1]);
-    } else {
-        std::cout << "\nEnter scale factor (e.g., 2.0, 0.5, 3.0): ";
-        std::cin >> factor;
-    }
-
-    if (factor <= 0) {
-        std::cout << "Error: scale factor must be a positive number!\n";
-        return 1;
     }
 
     std::cout << "\nSCALING WITH FACTOR " << factor << "...\n\n";
